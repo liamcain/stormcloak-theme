@@ -1,5 +1,7 @@
 # Stormcloak
 
+![Stormcloak Logo](https://user-images.githubusercontent.com/693981/107906502-4f4c4580-6f1f-11eb-890b-4e11e2dee955.png)
+
 A theme for Obsidian based on [Nord Theme](https://www.nordtheme.com/).
 
 ## Credits
