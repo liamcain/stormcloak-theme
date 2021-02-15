@@ -1,0 +1,31 @@
+@media print {
+  /* pagebreak before all ## headings */
+  h2 {
+    page-break-before: always;
+  }
+
+  h3,
+  h4 {
+    page-break-after: avoid;
+  }
+
+  pre,
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  /* use double <hr> ('---') to indicate a page break */
+  hr + hr {
+    page-break-before: always;
+    visibility: hidden;
+  }
+
+  :not(hr) + hr {
+    visibility: hidden;
+  }
+
+  :not(hr) + hr + :not(hr):not(h2) {
+    border-top: 1px solid black;
+    padding-top: 2em;
+  }
+}

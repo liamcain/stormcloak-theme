@@ -1,0 +1,70 @@
+.markdown-preview-view {
+  ul ul,
+  ol ol,
+  ul ol,
+  ol ul {
+    padding-inline-start: 30px;
+  }
+
+  ul:not(.contains-task-list) ul:not(.contains-task-list) {
+    border-left: 1px solid var(--dark2);
+    margin-left: -12px;
+    padding-inline-start: 42px;
+  }
+
+  ul {
+    list-style: none;
+
+    li:not(.task-list-item)::before {
+      content: "\2022";
+      color: var(--dark2);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  .list-collapse-indicator {
+    color: var(--dark2);
+  }
+
+  li > p {
+    display: inline;
+  }
+}
+
+.markdown-preview-view ol > li.task-list-item .collapse-indicator,
+.markdown-preview-view ul > li.task-list-item .collapse-indicator {
+  margin-left: -42px;
+  margin-top: 12px;
+  position: absolute;
+}
+
+.markdown-preview-view .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view ol > li .collapse-indicator svg,
+.markdown-preview-view ul > li .collapse-indicator svg {
+  opacity: 0;
+}
+
+.contains-task-list:hover .collapse-indicator svg,
+h1:hover .heading-collapse-indicator.collapse-indicator svg,
+h2:hover .heading-collapse-indicator.collapse-indicator svg,
+h3:hover .heading-collapse-indicator.collapse-indicator svg,
+h4:hover .heading-collapse-indicator.collapse-indicator svg,
+h5:hover .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view .is-collapsed .collapse-indicator svg,
+.markdown-preview-view .collapse-indicator:hover svg {
+  opacity: 1;
+}
+.markdown-preview-view div.is-collapsed h1::after,
+.markdown-preview-view div.is-collapsed h2::after,
+.markdown-preview-view div.is-collapsed h3::after,
+.markdown-preview-view div.is-collapsed h4::after,
+.markdown-preview-view div.is-collapsed h5::after,
+.markdown-preview-view ol .is-collapsed::after,
+.markdown-preview-view ul .is-collapsed::after {
+  content: "…";
+  padding: 5px;
+  color: var(--text-faint);
+}

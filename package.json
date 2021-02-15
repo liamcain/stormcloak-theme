@@ -1,0 +1,13 @@
+{
+  "name": "stormcloak-obsidian-theme",
+  "version": "1.0.0",
+  "description": "An Obsidian theme based on the Nord theme family",
+  "scripts": {
+    "build": "sass src/index.scss ./obsidian.css"
+  },
+  "author": "liamcain",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "1.32.7"
+  }
+}

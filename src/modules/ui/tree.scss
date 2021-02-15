@@ -1,0 +1,27 @@
+.tree-item-inner {
+  font-size: 0.9em;
+}
+
+.tree-item-self {
+  .collapse-icon {
+    opacity: 0.5;
+  }
+}
+
+.tree-item-children {
+  margin-left: 10px;
+
+  & > .tree-item {
+    border-left: 1px solid var(--dark2);
+    padding-left: 10px;
+  }
+}
+
+.tree-item-flair {
+  background-color: var(--dark2);
+  text-align: center;
+}
+
+.tree-item-self.is-clickable:hover {
+  background: transparent;
+}

@@ -1,0 +1,43 @@
+/* Support for https://github.com/liamcain/obsidian-calendar-plugin */
+
+#calendar-container {
+  --color-text-day: var(--light-aux);
+  --color-text-today: var(--green);
+  --color-text-weeknum: var(--purple);
+  --color-arrow: var(--purple);
+  --color-dot: var(--frost2);
+
+  .nav {
+    font-size: 0.8em;
+  }
+
+  .reset-button {
+    display: none;
+  }
+
+  .year {
+    color: var(--purple);
+  }
+
+  .day {
+    &:active,
+    &:active,
+    &:hover {
+      background: var(--dark1);
+    }
+
+    &.today {
+      .filled {
+        fill: var(--green);
+      }
+      .hollow {
+        stroke: var(--green);
+      }
+
+      &.active,
+      &:active {
+        background: var(--dark2);
+      }
+    }
+  }
+}

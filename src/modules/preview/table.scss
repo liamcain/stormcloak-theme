@@ -1,0 +1,72 @@
+.table-view-table {
+  > tr > th {
+    border-bottom: 2px solid var(--background-modifier-border);
+  }
+
+  &:nth-child(2) td {
+    padding: 0 8px;
+  }
+}
+
+thead {
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+.calendarview__day--today {
+  background: var(--purple);
+}
+
+.calendarview__day--active {
+  background: var(--red) !important;
+  z-index: 1;
+  position: relative;
+}
+
+.calendarview__container {
+  overflow-y: scroll;
+  padding: 0 16px;
+}
+
+.calendarview__table {
+  border: solid 1px var(--dark0);
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    background-color: var(--dark0);
+    padding: 8px;
+  }
+
+  td {
+    cursor: pointer;
+    border: solid 1px var(--dark0);
+    font-size: 0.8em;
+    padding: 8px;
+
+    &:empty {
+      background-color: var(--dark2);
+    }
+
+    &:hover {
+      background-color: var(--dark0);
+    }
+  }
+
+  .dot-container {
+    line-height: 4px;
+    zoom: 0.6;
+  }
+
+  .calendar-dot {
+    border-radius: 100%;
+    background: var(--frost2);
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin-right: 4px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
