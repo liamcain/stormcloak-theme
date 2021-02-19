@@ -2,8 +2,12 @@
   padding: 0;
 }
 
+.workspace-tabs {
+  background: var(--background-secondary);
+}
+
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
-  height: calc(100% - 6px);
+  height: 100%;
 }
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
