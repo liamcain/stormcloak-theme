@@ -1,6 +1,5 @@
 @charset "UTF-8";
 :root {
-  --dark-aux: #292e39;
   --dark0: #2e3440;
   --dark1: #3b4252;
   --dark2: #434c5e;
@@ -8,6 +7,7 @@
   --light0: #d8dee9;
   --light1: #e5e9f0;
   --light2: #eceff4;
+  --dark-aux: #292e39;
   --light-aux: #abb9cf;
   --frost0: #8fbcbb;
   --frost1: #88c0d0;
@@ -23,6 +23,9 @@
 .theme-dark,
 .theme-light {
   --font-monospace: "Fira Code";
+  --background-modifier-cover: rgba(0, 0, 0, 0.7);
+  --background-modifier-error: var(--red);
+  --background-modifier-error-hover: #a9444e;
   --background-primary: var(--dark0);
   --background-primary-alt: var(--dark0);
   --background-secondary: var(--dark-aux);
@@ -31,6 +34,7 @@
   --text-normal: var(--light2);
   --text-faint: rgba(255, 255, 255, 0.2);
   --text-muted: var(--light-aux);
+  --text-error: var(--red);
   --text-title-h1: var(--purple);
   --text-title-h2: var(--orange);
   --text-title-h3: var(--yellow);
@@ -88,6 +92,9 @@
   padding-left: 4px;
   padding-right: 4px;
 }
+.cm-s-obsidian .HyperMD-header {
+  line-height: 1.4 !important;
+}
 .cm-s-obsidian pre.HyperMD-header {
   padding: 12px 0 !important;
 }
@@ -103,6 +110,7 @@
   margin-left: 4px;
 }
 
+/* Credit: Minimal Theme by @kepano */
 /* Adjustments to title bar for traffic light icons */
 .mod-macos.minimal-folding.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
   --traffic-space: 80px;
@@ -152,6 +160,9 @@
 }
 
 /* Add quotation character before quote */
+blockquote {
+  margin-inline-start: 0;
+}
 blockquote:before {
   font: 14px/20px italic Times, serif;
   content: "“";
@@ -159,21 +170,20 @@ blockquote:before {
   line-height: 0.1em;
   vertical-align: -0.4em;
 }
-
 blockquote p {
   display: inline;
 }
 
-blockquote {
-  margin-inline-start: 0;
-}
-
 .cm-formatting-header {
-  left: calc(-60px + 0.2em);
+  left: calc(-62px + 0.2em);
   opacity: 0.25;
   position: absolute;
   text-align: right;
   width: 60px;
+}
+
+.CodeMirror-gutter {
+  width: 2em;
 }
 
 .CodeMirror-gutter-elt {
@@ -197,31 +207,8 @@ blockquote {
   margin-left: 4px;
 }
 
-/* --------------- */
-/* Image zoom  */
-.view-content img {
-  cursor: zoom-in;
-}
-
-.view-content img:active {
-  cursor: zoom-out;
-  display: block;
-  z-index: 100;
-  position: fixed;
-  max-height: calc(100% + 1px);
-  max-width: calc(100% - 20px);
-  height: calc(100% + 1px);
-  width: 100%;
-  object-fit: contain;
-  margin: -0.5px auto 0;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--background-translucent);
+.backlink-pane .search-result-container {
+  margin-left: 8px;
 }
 
 /* Support for https://github.com/liamcain/obsidian-calendar-plugin */
@@ -540,7 +527,6 @@ thead {
   border-left: none;
   border-right: none;
   padding-bottom: 2px;
-  cursor: text;
 }
 
 span.cm-hashtag.cm-hashtag-begin {
@@ -566,6 +552,9 @@ span.cm-hashtag.cm-hashtag-end {
   padding-left: 48px;
   padding-right: 48px;
 }
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height: unset;
+}
 .markdown-preview-view .cm-header,
 .markdown-preview-view h1,
 .markdown-preview-view h2,
@@ -581,6 +570,9 @@ span.cm-hashtag.cm-hashtag-end {
 .markdown-preview-view hr {
   margin: 32px 0;
 }
+.markdown-preview-view code {
+  color: var(--inline-code);
+}
 
 .markdown-preview-section pre code,
 .markdown-preview-section code {
@@ -594,10 +586,6 @@ span.cm-hashtag.cm-hashtag-end {
 }
 .markdown-preview-section code {
   color: var(--inline-code);
-}
-
-.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-  max-height: unset;
 }
 
 h1,
@@ -626,12 +614,12 @@ th,
 
 .cm-header-1,
 .markdown-preview-section h1 {
-  font-size: 34px;
+  font-size: 30px;
   color: var(--text-title-h1);
 }
 .cm-header-1.cm-formatting,
 .markdown-preview-section h1.cm-formatting {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .cm-header-2,
@@ -700,25 +688,13 @@ th,
   color: var(--dark3);
 }
 
-/* Frameless mode */
-.titlebar,
-.titlebar-inner {
-  background: transparent;
-  position: fixed;
-  top: 0;
-  height: 12px;
+.titlebar {
+  background-color: var(--dark-aux);
+  border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: transparent;
-}
-
-.titlebar-text {
-  display: none;
-}
-
-.is-frameless {
-  padding-top: 0px !important;
 }
 
 .view-header {
@@ -729,102 +705,19 @@ th,
   font-size: 12px;
 }
 
-.workspace-split.mod-right-split > .workspace-tabs,
-.workspace-split.mod-root .view-header {
-  padding-top: 4px;
-}
-
-.workspace-split.mod-left-split > .workspace-tabs {
-  padding-top: 24px;
-}
-
-.workspace-split.mod-right-split > .workspace-tabs ~ .workspace-tabs,
-.workspace-split.mod-left-split > .workspace-tabs ~ .workspace-tabs {
-  padding-top: 0px;
-}
-
-.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
-.is-fullscreen .workspace-split.mod-root .view-header {
-  padding-top: 0px;
-}
-
-/* --------------- */
-/* App Menu ribbon moved to the bottom edge */
-.workspace-ribbon.mod-left {
-  position: fixed;
-  border-right: 0px;
-  margin: 0;
-  height: 40px;
-  bottom: 0;
-  top: auto;
-  display: flex;
-  flex-direction: row;
-  background: var(--background-primary);
-  z-index: 17;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-}
-.workspace-ribbon.mod-left:after {
-  content: " ";
-  border-top: 1px solid var(--background-modifier-border);
-  background: var(--background-primary);
-  padding-right: 100vw;
-  pointer-events: none;
-}
-
-.side-dock-actions,
-.side-dock-settings {
-  display: flex;
-  border-top: 1px solid var(--background-modifier-border);
-  background: var(--background-primary);
-  margin: 0;
-}
-
-.workspace-ribbon.mod-left .side-dock-ribbon-action {
-  display: inline-block;
-  padding: 9px 5px 0 12px;
-}
-
-.workspace-ribbon.mod-left:hover {
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-
-.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  border-top: 1px solid var(--background-modifier-border);
-}
-
-.workspace-split.mod-left-split {
-  margin: 0;
-}
-
-.workspace-ribbon.mod-right {
-  opacity: 1;
-  height: 40px;
-  position: fixed;
-  top: auto;
-  right: 5px;
-  bottom: 0;
-  z-index: 999;
-}
-
-.workspace-ribbon-collapse-btn {
-  margin: 0;
-  padding-top: 8px;
-}
-
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
   background: transparent;
-}
-
-.workspace-tabs {
-  background: var(--background-secondary);
 }
 
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   top: 0;
+  height: 100%;
   width: 1px;
+}
+
+body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
+  padding-top: 24px;
 }
 
 #graph-view-canvas .links {
@@ -870,7 +763,7 @@ th,
   background: transparent;
   color: var(--text-muted);
   opacity: 1;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .view-action:hover,
@@ -997,6 +890,16 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 
 .modal {
   background: var(--dark1);
+  padding: 24px;
+}
+
+.modal-title {
+  text-align: left;
+  font-size: 24px;
+}
+
+.modal-button-container {
+  text-align: right;
 }
 
 .theme-dark .notice {
@@ -1022,13 +925,22 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   overflow: overlay;
 }
 
+button {
+  transition: background-color 0.2s ease-in-out;
+  font-weight: 500;
+  margin-right: 0px;
+}
+
+button + button {
+  margin-left: 12px;
+}
+
 .modal.mod-settings .vertical-tab-content-container {
   padding: 0;
 }
 
 button.mod-cta {
   background-color: var(--frost3);
-  font-weight: 600;
 }
 button.mod-cta:hover {
   background-color: var(--interactive-before);
@@ -1039,6 +951,8 @@ button.mod-cta:hover {
 }
 
 .dropdown {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
   background-color: var(--dark1);
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23c8d3f5%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
 }
@@ -1061,10 +975,18 @@ button.mod-cta:hover {
   box-shadow: none;
 }
 .checkbox-container.is-enabled {
-  background-color: var(--green);
+  background-color: var(--frost2);
 }
 .checkbox-container.is-enabled:after {
   transform: translate3d(18px, 0, 0);
+}
+
+.community-plugin-search {
+  padding: 24px 0 0 0;
+}
+.community-plugin-search .setting-item-control,
+.community-plugin-search .search-input-container {
+  width: 100%;
 }
 
 .status-bar {
@@ -1129,8 +1051,12 @@ input.prompt-input {
   padding: 0;
 }
 
+.workspace-tabs {
+  background: var(--background-secondary);
+}
+
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
-  height: calc(100% - 6px);
+  height: 100%;
 }
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {

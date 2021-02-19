@@ -1,3 +1,13 @@
 .modal {
   background: var(--dark1);
+  padding: 24px;
+}
+
+.modal-title {
+  text-align: left;
+  font-size: 24px;
+}
+
+.modal-button-container {
+  text-align: right;
 }

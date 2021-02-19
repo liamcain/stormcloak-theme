@@ -1,9 +1,13 @@
 .cm-formatting-header {
-  left: calc(-60px + 0.2em);
+  left: calc(-62px + 0.2em);
   opacity: 0.25;
   position: absolute;
   text-align: right;
   width: 60px;
+}
+
+.CodeMirror-gutter {
+  width: 2em;
 }
 
 .CodeMirror-gutter-elt {

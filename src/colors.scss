@@ -1,3 +1,9 @@
+$red: #bf616a;
+$orange: #d08770;
+$yellow: #ebcb8b;
+$green: #a3be8c;
+$purple: #b48ead;
+
 :root {
   --dark0: #2e3440;
   --dark1: #3b4252;
@@ -18,16 +24,19 @@
   --frost2: #81a1c1;
   --frost3: #5e81ac;
 
-  --red: #bf616a;
-  --orange: #d08770;
-  --yellow: #ebcb8b;
-  --green: #a3be8c;
-  --purple: #b48ead;
+  --red: #{$red};
+  --orange: #{$orange};
+  --yellow: #{$yellow};
+  --green: #{$green};
+  --purple: #{$purple};
 }
 
 .theme-dark,
 .theme-light {
   --font-monospace: "Fira Code";
+  --background-modifier-cover: rgba(0, 0, 0, 0.7);
+  --background-modifier-error: var(--red);
+  --background-modifier-error-hover: #{darken($red, 10%)};
   --background-primary: var(--dark0);
   --background-primary-alt: var(--dark0);
   --background-secondary: var(--dark-aux);
@@ -36,6 +45,7 @@
   --text-normal: var(--light2);
   --text-faint: rgba(255, 255, 255, 0.2);
   --text-muted: var(--light-aux);
+  --text-error: var(--red);
   --text-title-h1: var(--purple);
   --text-title-h2: var(--orange);
   --text-title-h3: var(--yellow);
