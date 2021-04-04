@@ -4,24 +4,38 @@
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
+.plugin-sliding-panes-rotate-header
+  .workspace
+  > .mod-root
+  > .workspace-leaf.mod-active
+  > .workspace-leaf-content
+  > .view-header
+  > .view-header-title-container:before,
+.plugin-sliding-panes-rotate-header
+  .workspace
+  > .mod-root
+  > .workspace-leaf.mod-active
+  > .workspace-leaf-content
+  > .view-header
+  > .view-header-title-container:after,
 .workspace-split.mod-root
   > .workspace-leaf:first-of-type:last-of-type.mod-active
-  .view-header-title-container:after {
-  background: transparent;
+  .view-header-title-container:after,
+.view-header-title-container:after {
+  background: transparent !important;
 }
 
-.view-header {
-  height: 40px;
-}
-
-.view-header-title {
-  font-size: 12px;
-}
-
+.view-header,
 .workspace-split.mod-root
   > .workspace-leaf:first-of-type:last-of-type
   .view-header {
   background: transparent;
+  border: none;
+}
+
+.view-header-title {
+  color: var(--text-faint);
+  font-size: 12px;
 }
 
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,

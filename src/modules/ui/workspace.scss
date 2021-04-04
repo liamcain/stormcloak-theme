@@ -84,3 +84,7 @@
   height: 36px;
   background-color: transparent;
 }
+
+.workspace-ribbon.mod-right.is-collapsed {
+  pointer-events: none;
+}

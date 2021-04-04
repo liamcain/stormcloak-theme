@@ -41,14 +41,15 @@ input[type="checkbox"]:checked {
     padding-inline-start: 0;
   }
 
+  .slated-task-icon,
   .task-list-item-checkbox {
     width: 18px;
     height: 18px;
     position: relative;
     top: 6px;
     line-height: 0;
-    margin-left: -1.5em;
-    margin-right: 6px;
+    margin-left: -40px;
+    margin-right: 8px;
     filter: none;
   }
 }

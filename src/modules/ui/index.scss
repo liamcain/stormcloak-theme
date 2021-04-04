@@ -6,6 +6,7 @@
 @use './lists.scss';
 @use './modal.scss';
 @use './notification.scss';
+@use './query-block.scss';
 @use './scrollbar.scss';
 @use './settings.scss';
 @use './status-bar.scss';
@@ -13,3 +14,6 @@
 @use './tree.scss';
 @use './ui-frame.scss';
 @use './workspace.scss';
+
+@use './reveal.scss';
+@use './publish.scss';

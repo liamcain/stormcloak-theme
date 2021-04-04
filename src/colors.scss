@@ -33,12 +33,12 @@ $purple: #b48ead;
 
 .theme-dark,
 .theme-light {
-  --font-monospace: "Fira Code";
+  --font-monospace: 'Fira Code', 'Source Code Pro', monospace;
   --background-modifier-cover: rgba(0, 0, 0, 0.7);
   --background-modifier-error: var(--red);
   --background-modifier-error-hover: #{darken($red, 10%)};
   --background-primary: var(--dark0);
-  --background-primary-alt: var(--dark0);
+  --background-primary-alt: var(--dark-aux);
   --background-secondary: var(--dark-aux);
   --background-secondary-alt: var(--dark0);
   --text-accent-hover: var(--frost3);

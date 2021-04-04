@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 :root {
   --dark0: #2e3440;
   --dark1: #3b4252;
@@ -22,12 +23,12 @@
 
 .theme-dark,
 .theme-light {
-  --font-monospace: "Fira Code";
+  --font-monospace: "Fira Code", "Source Code Pro", monospace;
   --background-modifier-cover: rgba(0, 0, 0, 0.7);
   --background-modifier-error: var(--red);
   --background-modifier-error-hover: #a9444e;
   --background-primary: var(--dark0);
-  --background-primary-alt: var(--dark0);
+  --background-primary-alt: var(--dark-aux);
   --background-secondary: var(--dark-aux);
   --background-secondary-alt: var(--dark0);
   --text-accent-hover: var(--frost3);
@@ -63,7 +64,7 @@
   --scrollbar-thumb-bg: var(--dark1);
 }
 
-.markdown-source-view {
+.markdown-source-view.mod-cm5 {
   font-family: var(--font-monospace);
   padding: 0;
 }
@@ -85,6 +86,9 @@
   padding-left: 0;
   padding-right: 0;
 }
+.cm-s-obsidian .CodeMirror-line {
+  padding: 0;
+}
 .cm-s-obsidian pre.HyperMD-codeblock {
   background-color: var(--pre-code);
   color: var(--code-block);
@@ -98,7 +102,6 @@
 .cm-s-obsidian pre.HyperMD-header {
   padding: 12px 0 !important;
 }
-
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--inline-code);
@@ -138,7 +141,7 @@
   display: flex;
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type=graph]) .view-header-icon {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root > .workspace-leaf:first-of-type .workspace-leaf-content .view-header-icon {
   text-align: left;
   min-width: var(--traffic-space);
   padding-left: var(--traffic-padding);
@@ -174,6 +177,10 @@ blockquote p {
   display: inline;
 }
 
+.hider-frameless .workspace-split.mod-left-split > .workspace-tabs ~ .workspace-tabs {
+  padding-top: 0 !important;
+}
+
 .cm-formatting-header {
   left: calc(-62px + 0.2em);
   opacity: 0.25;
@@ -196,7 +203,11 @@ blockquote p {
 
 .CodeMirror-scroll {
   padding-left: 48px;
-  padding-right: 48px;
+  padding-right: 24px;
+}
+
+.CodeMirror-sizer {
+  border-right-width: 0px !important;
 }
 
 .workspace-split.mod-right-split {
@@ -221,9 +232,6 @@ blockquote p {
 }
 #calendar-container .nav {
   font-size: 0.8em;
-}
-#calendar-container .reset-button {
-  display: none;
 }
 #calendar-container .year {
   color: var(--purple);
@@ -379,14 +387,15 @@ input[type=checkbox]:checked {
 .markdown-preview-view .task-list-item {
   padding-inline-start: 0;
 }
+.markdown-preview-view .slated-task-icon,
 .markdown-preview-view .task-list-item-checkbox {
   width: 18px;
   height: 18px;
   position: relative;
   top: 6px;
   line-height: 0;
-  margin-left: -1.5em;
-  margin-right: 6px;
+  margin-left: -40px;
+  margin-right: 8px;
   filter: none;
 }
 
@@ -563,7 +572,6 @@ span.cm-hashtag.cm-hashtag-end {
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
   font-family: Merriweather;
-  font-weight: 500;
   letter-spacing: 0.25px;
   margin: 24px 0;
 }
@@ -612,55 +620,55 @@ th,
   font-weight: 500;
 }
 
-.cm-header-1,
+.CodeMirror pre.HyperMD-header-1,
 .markdown-preview-section h1 {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--text-title-h1);
 }
-.cm-header-1.cm-formatting,
+.CodeMirror pre.HyperMD-header-1.cm-formatting,
 .markdown-preview-section h1.cm-formatting {
-  font-size: 26px;
+  font-size: 24px;
 }
 
-.cm-header-2,
+.CodeMirror pre.HyperMD-header-2,
 .markdown-preview-section h2 {
-  font-size: 26px;
+  font-size: 24px;
   color: var(--text-title-h2);
 }
-.cm-header-2.cm-formatting,
+.CodeMirror pre.HyperMD-header-2.cm-formatting,
 .markdown-preview-section h2.cm-formatting {
-  font-size: 22px;
+  font-size: 20px;
 }
 
-.cm-header-3,
+.CodeMirror pre.HyperMD-header-3,
 .markdown-preview-section h3 {
   font-size: 22px;
   color: var(--text-title-h3);
 }
-.cm-header-3.cm-formatting,
+.CodeMirror pre.HyperMD-header-3.cm-formatting,
 .markdown-preview-section h3.cm-formatting {
   font-size: 18px;
 }
 
-.cm-header-4,
+.CodeMirror pre.HyperMD-header-4,
 .markdown-preview-section h4 {
   font-size: 20px;
   color: var(--text-title-h4);
 }
-.cm-header-4.cm-formatting,
+.CodeMirror pre.HyperMD-header-4.cm-formatting,
 .markdown-preview-section h4.cm-formatting {
   font-size: 14px;
 }
 
-.cm-header-5,
-.cm-header-6,
+.CodeMirror pre.HyperMD-header-5,
+.CodeMirror pre.HyperMD-header-6,
 .markdown-preview-section h5,
 .markdown-preview-section h6 {
   font-size: 18px;
   color: var(--text-title-h5);
 }
-.cm-header-5.cm-formatting,
-.cm-header-6.cm-formatting,
+.CodeMirror pre.HyperMD-header-5.cm-formatting,
+.CodeMirror pre.HyperMD-header-6.cm-formatting,
 .markdown-preview-section h5.cm-formatting,
 .markdown-preview-section h6.cm-formatting {
   font-size: 10px;
@@ -693,20 +701,22 @@ th,
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
-.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
-  background: transparent;
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
+.view-header-title-container:after {
+  background: transparent !important;
 }
 
-.view-header {
-  height: 40px;
+.view-header,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+  background: transparent;
+  border: none;
 }
 
 .view-header-title {
+  color: var(--text-faint);
   font-size: 12px;
-}
-
-.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  background: transparent;
 }
 
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
@@ -775,7 +785,7 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   background: transparent;
   color: var(--frost2);
   opacity: 1;
-  transition: opacity 0 ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .workspace-leaf-content[data-type=search] .nav-action-button.is-active {
@@ -805,6 +815,7 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   position: absolute;
   background: transparent;
   border-right: 0;
+  pointer-events: none;
 }
 
 .mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
@@ -854,7 +865,7 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 
 .markdown-preview-view ol > li.task-list-item .collapse-indicator,
 .markdown-preview-view ul > li.task-list-item .collapse-indicator {
-  margin-left: -42px;
+  margin-left: -2.5em;
   margin-top: 12px;
   position: absolute;
 }
@@ -888,6 +899,11 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   color: var(--text-faint);
 }
 
+.markdown-preview-view ul > li.task-list-item.is-deferred {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+
 .modal {
   background: var(--dark1);
   padding: 24px;
@@ -904,6 +920,11 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 
 .theme-dark .notice {
   background: var(--background-secondary);
+}
+
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+  color: var(--text-faint);
+  justify-content: left;
 }
 
 ::-webkit-scrollbar {
@@ -1040,13 +1061,6 @@ input.prompt-input {
   border-bottom: none;
 }
 
-.view-actions a {
-  color: var(--text-normal);
-}
-.view-actions a:hover {
-  color: var(--text-a);
-}
-
 .nav-header {
   padding: 0;
 }
@@ -1135,6 +1149,64 @@ input.prompt-input {
   border: 0 !important;
   height: 36px;
   background-color: transparent;
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  pointer-events: none;
+}
+
+.reveal {
+  background-color: var(--dark-aux);
+  color: var(--text-normal);
+  font-size: 36px;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: unset;
+}
+.reveal h1 {
+  color: var(--text-title-h1);
+}
+.reveal h2 {
+  color: var(--text-title-h2);
+}
+.reveal h3 {
+  color: var(--text-title-h3);
+}
+.reveal h4 {
+  color: var(--text-title-h4);
+}
+.reveal h5,
+.reveal h6 {
+  color: var(--text-title-h5);
+}
+.reveal mark {
+  background-color: transparent !important;
+  color: var(--text-normal);
+}
+.reveal blockquote {
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+}
+.reveal .slides {
+  text-align: left;
+}
+
+.page-header {
+  display: none;
+}
+
+.site-footer {
+  display: none;
+}
+
+.no-sidebar .site-body-left-column {
+  display: none;
 }
 
 /*# sourceMappingURL=obsidian.css.map */

@@ -31,8 +31,8 @@
 .mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
   .workspace-split.mod-left-split.is-collapsed
   + .mod-root
-  .workspace-leaf:first-of-type
-  .workspace-leaf-content:not([data-type="graph"])
+  > .workspace-leaf:first-of-type
+  .workspace-leaf-content
   .view-header-icon {
   text-align: left;
   min-width: var(--traffic-space);

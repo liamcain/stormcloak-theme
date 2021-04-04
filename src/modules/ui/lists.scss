@@ -36,7 +36,7 @@
 
 .markdown-preview-view ol > li.task-list-item .collapse-indicator,
 .markdown-preview-view ul > li.task-list-item .collapse-indicator {
-  margin-left: -42px;
+  margin-left: -2.5em;
   margin-top: 12px;
   position: absolute;
 }
@@ -67,4 +67,9 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   content: "…";
   padding: 5px;
   color: var(--text-faint);
+}
+
+.markdown-preview-view ul > li.task-list-item.is-deferred {
+  color: var(--text-faint);
+  text-decoration: line-through;
 }

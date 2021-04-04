@@ -49,7 +49,7 @@
   background: transparent;
   color: var(--frost2);
   opacity: 1;
-  transition: opacity 0 ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
@@ -73,12 +73,15 @@
   border-color: var(--background-modifier-border);
   background: var(--background-secondary);
 }
+
 .workspace-ribbon.mod-right {
   right: 0;
   position: absolute;
   background: transparent;
   border-right: 0;
+  pointer-events: none;
 }
+
 .mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
   margin-right: 0;
 }

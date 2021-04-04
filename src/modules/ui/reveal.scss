@@ -1,0 +1,50 @@
+.reveal {
+  background-color: var(--dark-aux);
+  color: var(--text-normal);
+  font-size: 36px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: unset;
+  }
+
+  h1 {
+    color: var(--text-title-h1);
+  }
+
+  h2 {
+    color: var(--text-title-h2);
+  }
+
+  h3 {
+    color: var(--text-title-h3);
+  }
+
+  h4 {
+    color: var(--text-title-h4);
+  }
+
+  h5,
+  h6 {
+    color: var(--text-title-h5);
+  }
+
+  mark {
+    background-color: transparent !important;
+    color: var(--text-normal);
+  }
+
+  blockquote {
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+  }
+
+  .slides {
+    text-align: left;
+  }
+}

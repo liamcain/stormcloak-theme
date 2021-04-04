@@ -1,0 +1,6 @@
+.hider-frameless
+  .workspace-split.mod-left-split
+  > .workspace-tabs
+  ~ .workspace-tabs {
+  padding-top: 0 !important;
+}
