@@ -101,8 +101,7 @@
   padding: 12px 0 !important;
 }
 .cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian
-  span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--inline-code);
   background-color: var(--pre-code);
 }
@@ -134,54 +133,30 @@
   --traffic-padding: 40px;
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
-  .workspace-split.mod-left-split.is-collapsed
-  + .mod-root
-  .workspace-leaf:first-of-type
-  .workspace-leaf-content:not([data-type="graph"])
-  .view-header {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type=graph]) .view-header {
   position: relative;
   right: auto;
   display: flex;
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
-  .workspace-split.mod-left-split.is-collapsed
-  + .mod-root
-  > .workspace-leaf:first-of-type
-  .workspace-leaf-content
-  .view-header-icon {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root > .workspace-leaf:first-of-type .workspace-leaf-content .view-header-icon {
   text-align: left;
   min-width: var(--traffic-space);
   padding-left: var(--traffic-padding);
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
-  .workspace-split.mod-left-split.is-collapsed
-  + .mod-root
-  .workspace-leaf:first-of-type
-  .workspace-leaf-content:not([data-type="graph"])
-  .view-actions {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type=graph]) .view-actions {
   flex: 1 var(--traffic-space);
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
-  .workspace-split.mod-left-split.is-collapsed
-  + .mod-root
-  .workspace-leaf:first-of-type
-  .workspace-leaf-content:not([data-type="graph"])
-  .view-header-title-container {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type=graph]) .view-header-title-container {
   position: static;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: var(--line-width);
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
-  .workspace-split.mod-left-split.is-collapsed
-  + .mod-root
-  .workspace-leaf:first-of-type
-  .view-header-title:before {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title:before {
   right: var(--traffic-space);
 }
 
@@ -200,10 +175,7 @@ blockquote p {
   display: inline;
 }
 
-.hider-frameless
-  .workspace-split.mod-left-split
-  > .workspace-tabs
-  ~ .workspace-tabs {
+.hider-frameless .workspace-split.mod-left-split > .workspace-tabs ~ .workspace-tabs {
   padding-top: 0 !important;
 }
 
@@ -254,9 +226,7 @@ blockquote p {
 #calendar-container .year {
   color: var(--purple);
 }
-#calendar-container .day:active,
-#calendar-container .day:active,
-#calendar-container .day:hover {
+#calendar-container .day:active, #calendar-container .day:active, #calendar-container .day:hover {
   background: var(--dark1);
 }
 #calendar-container .day.today .filled {
@@ -265,15 +235,14 @@ blockquote p {
 #calendar-container .day.today .hollow {
   stroke: var(--green);
 }
-#calendar-container .day.today.active,
-#calendar-container .day.today:active {
+#calendar-container .day.today.active, #calendar-container .day.today:active {
   background: var(--dark2);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"] {
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
   background-color: var(--dark1);
   border: 1px solid var(--background-modifier-border);
   border-radius: 4px;
@@ -283,10 +252,10 @@ input[type="number"] {
   padding: 8px;
   transition: background-color 0.2s ease-in-out;
 }
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-input[type="number"]:hover {
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=number]:hover {
   background-color: var(--dark1);
 }
 
@@ -336,8 +305,7 @@ input[type="number"]:hover {
   margin: 2px 4px;
   padding: 2px 4px;
 }
-.nav-action-button:hover,
-.nav-action-button.is-active {
+.nav-action-button:hover, .nav-action-button.is-active {
   color: var(--frost2);
   background: transparent;
   opacity: 1;
@@ -368,21 +336,20 @@ input[type="number"]:hover {
   background-color: rgba(89, 75, 95, 0.3) !important;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 50%;
   border: 1px solid var(--dark2);
   padding: 0;
 }
-input[type="checkbox"]:focus,
-input[type="checkbox"]:hover {
+input[type=checkbox]:focus, input[type=checkbox]:hover {
   outline: 0;
   border-color: var(--text-faint);
 }
 
-.is-flashing input[type="checkbox"]:checked,
-input[type="checkbox"]:checked {
+.is-flashing input[type=checkbox]:checked,
+input[type=checkbox]:checked {
   background-color: var(--dark2) !important;
   border: 1px solid var(--dark2);
   background-position: center;
@@ -419,7 +386,7 @@ input[type="checkbox"]:checked {
   filter: none;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   background: var(--interactive-accent);
 }
 
@@ -437,8 +404,7 @@ input[type="range"]::-webkit-slider-thumb {
 .markdown-embed-title,
 .file-embed-title {
   color: var(--dark3);
-  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   text-align: left;
 }
@@ -582,8 +548,7 @@ span.cm-hashtag.cm-hashtag-end {
 }
 
 .markdown-preview-view {
-  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 14px;
   padding-left: 48px;
   padding-right: 48px;
@@ -598,7 +563,7 @@ span.cm-hashtag.cm-hashtag-end {
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
-  font-family: Merriweather;
+  font-family: Merriweather, Georgia, serif;
   letter-spacing: 0.25px;
   line-height: 125%;
   margin: 24px 0;
@@ -729,31 +694,15 @@ th,
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
-.plugin-sliding-panes-rotate-header
-  .workspace
-  > .mod-root
-  > .workspace-leaf.mod-active
-  > .workspace-leaf-content
-  > .view-header
-  > .view-header-title-container:before,
-.plugin-sliding-panes-rotate-header
-  .workspace
-  > .mod-root
-  > .workspace-leaf.mod-active
-  > .workspace-leaf-content
-  > .view-header
-  > .view-header-title-container:after,
-.workspace-split.mod-root
-  > .workspace-leaf:first-of-type:last-of-type.mod-active
-  .view-header-title-container:after,
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
 .view-header-title-container:after {
   background: transparent !important;
 }
 
 .view-header,
-.workspace-split.mod-root
-  > .workspace-leaf:first-of-type:last-of-type
-  .view-header {
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
   background: transparent;
   border: none;
 }
@@ -816,10 +765,10 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   transition: opacity 0.1s ease-in-out;
 }
 
-.workspace-leaf-content[data-type="search"] .nav-action-button.is-active,
-.workspace-leaf-content[data-type="backlink"] .nav-action-button.is-active,
+.workspace-leaf-content[data-type=search] .nav-action-button.is-active,
+.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active,
 .workspace-tab-header.is-active,
-.workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
+.workspace-leaf-content[data-type=search] .nav-action-button.is-active {
   background: transparent;
   color: var(--text-muted);
   opacity: 1;
@@ -838,13 +787,13 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   transition: opacity 0.1s ease-in-out;
 }
 
-.workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
+.workspace-leaf-content[data-type=search] .nav-action-button.is-active {
   background: transparent;
 }
 
 .nav-action-button,
-.workspace-leaf-content[data-type="search"] .nav-action-button,
-.workspace-leaf-content[data-type="backlink"] .nav-action-button {
+.workspace-leaf-content[data-type=search] .nav-action-button,
+.workspace-leaf-content[data-type=backlink] .nav-action-button {
   padding: 0 4px 0 8px;
   margin: 0;
 }
@@ -899,26 +848,11 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 .markdown-preview-view ul > li .collapse-indicator svg {
   opacity: 0;
 }
-.markdown-preview-view
-  h1:hover
-  .heading-collapse-indicator.collapse-indicator
-  svg,
-.markdown-preview-view
-  h2:hover
-  .heading-collapse-indicator.collapse-indicator
-  svg,
-.markdown-preview-view
-  h3:hover
-  .heading-collapse-indicator.collapse-indicator
-  svg,
-.markdown-preview-view
-  h4:hover
-  .heading-collapse-indicator.collapse-indicator
-  svg,
-.markdown-preview-view
-  h5:hover
-  .heading-collapse-indicator.collapse-indicator
-  svg,
+.markdown-preview-view h1:hover .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view h2:hover .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view h3:hover .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view h4:hover .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view h5:hover .heading-collapse-indicator.collapse-indicator svg,
 .markdown-preview-view .is-collapsed .collapse-indicator svg,
 .markdown-preview-view .collapse-indicator:hover svg {
   opacity: 1;
