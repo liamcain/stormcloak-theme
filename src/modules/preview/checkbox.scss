@@ -53,3 +53,7 @@ input[type="checkbox"]:checked {
     filter: none;
   }
 }
+
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--interactive-accent);
+}

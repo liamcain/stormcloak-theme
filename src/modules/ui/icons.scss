@@ -6,11 +6,20 @@
   margin-bottom: 0px !important;
   justify-content: flex-start;
   border: 0;
+
+  .is-mobile & {
+    padding: 10px 5px 5px 5px;
+  }
 }
 
 .nav-action-button svg {
   width: 15px;
+
+  .is-mobile {
+    width: 20px;
+  }
 }
+
 .workspace-ribbon-collapse-btn {
   display: none;
 }

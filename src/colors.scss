@@ -33,7 +33,7 @@ $purple: #b48ead;
 
 .theme-dark,
 .theme-light {
-  --font-monospace: 'Fira Code', 'Source Code Pro', monospace;
+  --font-monospace: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
   --background-modifier-cover: rgba(0, 0, 0, 0.7);
   --background-modifier-error: var(--red);
   --background-modifier-error-hover: #{darken($red, 10%)};
@@ -60,12 +60,12 @@ $purple: #b48ead;
   --interactive-accent: var(--dark1);
   --interactive-before: var(--dark3);
   --interactive-normal: var(--dark3);
-  --interactive-hover: var(--dark1);
-  --background-modifier-border: var(--dark1);
+  --interactive-hover: var(--frost3);
+  --background-modifier-border: var(--dark2);
   --background-modifier-form-field: var(--dark0);
   --background-modifier-form-field-highlighted: var(--dark2);
   --text-accent: var(--purple);
-  --interactive-accent-rgb: var(--orange);
+  // --interactive-accent-rgb: var(--orange);
   --inline-code: var(--frost1);
   --code-block: var(--frost1);
   --vim-cursor: var(--orange);

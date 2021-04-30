@@ -1,10 +1,12 @@
-.table-view-table {
-  > tr > th {
+.markdown-preview-view .table-view-table {
+  tr > th {
+    color: var(--green);
+    font-family: Merriweather, Georgia, serif;
     border-bottom: 2px solid var(--background-modifier-border);
   }
 
-  &:nth-child(2) td {
-    padding: 0 8px;
+  tr:nth-child(even) {
+    background-color: var(--background-secondary);
   }
 }
 

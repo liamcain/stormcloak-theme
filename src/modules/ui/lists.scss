@@ -6,70 +6,82 @@
     padding-inline-start: 30px;
   }
 
-  ul:not(.contains-task-list) ul:not(.contains-task-list) {
-    border-left: 1px solid var(--dark2);
-    margin-left: -12px;
-    padding-inline-start: 42px;
+  ul > li.task-list-item.is-deferred {
+    color: var(--text-faint);
+    text-decoration: line-through;
   }
 
-  ul {
-    list-style: none;
-
-    li:not(.task-list-item)::before {
-      content: "\2022";
-      color: var(--dark2);
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
+  .heading-collapse-indicator.collapse-indicator svg,
+  ol > li .collapse-indicator svg,
+  ul > li .collapse-indicator svg {
+    opacity: 0;
   }
 
-  .list-collapse-indicator {
-    color: var(--dark2);
+  h1:hover .heading-collapse-indicator.collapse-indicator svg,
+  h2:hover .heading-collapse-indicator.collapse-indicator svg,
+  h3:hover .heading-collapse-indicator.collapse-indicator svg,
+  h4:hover .heading-collapse-indicator.collapse-indicator svg,
+  h5:hover .heading-collapse-indicator.collapse-indicator svg,
+  .is-collapsed .collapse-indicator svg,
+  .collapse-indicator:hover svg {
+    opacity: 1;
+  }
+  div.is-collapsed h1::after,
+  div.is-collapsed h2::after,
+  div.is-collapsed h3::after,
+  div.is-collapsed h4::after,
+  div.is-collapsed h5::after,
+  ol .is-collapsed::after,
+  ul .is-collapsed::after {
+    content: "...";
+    padding: 5px;
+    color: var(--text-faint);
+  }
+  ol > li.task-list-item .collapse-indicator,
+  ul > li.task-list-item .collapse-indicator {
+    margin-left: -60px;
+    margin-top: 5px;
+    position: absolute;
+  }
+  ol > li .collapse-indicator {
+    padding-right: 20px;
+  }
+  .heading-collapse-indicator.collapse-indicator {
+    margin-left: -25px;
   }
 
-  li > p {
-    display: inline;
+  .collapse-indicator {
+    position: absolute;
+    margin-left: -42px;
   }
-}
 
-.markdown-preview-view ol > li.task-list-item .collapse-indicator,
-.markdown-preview-view ul > li.task-list-item .collapse-indicator {
-  margin-left: -2.5em;
-  margin-top: 12px;
-  position: absolute;
-}
+  ul > li:not(.task-list-item) .collapse-indicator {
+    padding-right: 20px;
+  }
 
-.markdown-preview-view .heading-collapse-indicator.collapse-indicator svg,
-.markdown-preview-view ol > li .collapse-indicator svg,
-.markdown-preview-view ul > li .collapse-indicator svg {
-  opacity: 0;
-}
+  ul > li:not(.task-list-item)::before {
+    content: "\2022";
+    text-align: left;
+    padding: 0;
+    font-size: 22px;
+    border-radius: 50%;
+    background: transparent;
+    float: left;
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-left: -16px;
+    display: inline-block;
+    line-height: 0;
+    height: 4px;
+    width: 4px;
+    border: 0px;
+    vertical-align: middle;
+    color: var(--text-faint);
+    transform: translateX(-2px);
+  }
 
-.contains-task-list:hover .collapse-indicator svg,
-h1:hover .heading-collapse-indicator.collapse-indicator svg,
-h2:hover .heading-collapse-indicator.collapse-indicator svg,
-h3:hover .heading-collapse-indicator.collapse-indicator svg,
-h4:hover .heading-collapse-indicator.collapse-indicator svg,
-h5:hover .heading-collapse-indicator.collapse-indicator svg,
-.markdown-preview-view .is-collapsed .collapse-indicator svg,
-.markdown-preview-view .collapse-indicator:hover svg {
-  opacity: 1;
-}
-.markdown-preview-view div.is-collapsed h1::after,
-.markdown-preview-view div.is-collapsed h2::after,
-.markdown-preview-view div.is-collapsed h3::after,
-.markdown-preview-view div.is-collapsed h4::after,
-.markdown-preview-view div.is-collapsed h5::after,
-.markdown-preview-view ol .is-collapsed::after,
-.markdown-preview-view ul .is-collapsed::after {
-  content: "…";
-  padding: 5px;
-  color: var(--text-faint);
-}
-
-.markdown-preview-view ul > li.task-list-item.is-deferred {
-  color: var(--text-faint);
-  text-decoration: line-through;
+  ul > li:not(.task-list-item).is-collapsed::before {
+    background: var(--background-modifier-border);
+    box-shadow: 3px 0 0px 4px var(--background-modifier-border);
+  }
 }

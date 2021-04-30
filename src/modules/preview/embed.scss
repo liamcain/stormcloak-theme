@@ -12,7 +12,8 @@
 .markdown-embed-title,
 .file-embed-title {
   color: var(--dark3);
-  font-family: "Avenir Next";
+  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont,
+    sans-serif;
   font-size: 16px;
   text-align: left;
 }

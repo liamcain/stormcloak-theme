@@ -11,18 +11,18 @@
 }
 
 .CodeMirror-gutter-elt {
-  top: 15px;
+  top: 1em;
 }
 
-.cm-s-obsidian .CodeMirror-gutters {
-  left: 0px !important;
-}
+// .cm-s-obsidian .CodeMirror-gutters {
+//   left: 0px !important;
+// }
 
 .CodeMirror-scroll {
-  padding-left: 48px;
+  padding-left: 24px;
   padding-right: 24px;
 }
 
-.CodeMirror-sizer {
-  border-right-width: 0px !important;
-}
+// .CodeMirror-sizer {
+//   border-right-width: 0px !important;
+// }

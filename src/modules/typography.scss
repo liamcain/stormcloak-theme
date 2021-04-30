@@ -1,9 +1,9 @@
-$fontsize-heading1: 24px;
-$fontsize-heading2: 22px;
-$fontsize-heading3: 20px;
-$fontsize-heading4: 18px;
-$fontsize-heading5: 16px;
-$fontsize-heading6: 16px;
+$fontsize-heading1: 175%;
+$fontsize-heading2: 150%;
+$fontsize-heading3: 125%;
+$fontsize-heading4: 112.5%;
+$fontsize-heading5: 100%;
+$fontsize-heading6: 100%;
 
 h1,
 h2,
@@ -29,51 +29,51 @@ th,
   font-weight: 500;
 }
 
-.CodeMirror pre.HyperMD-header-1,
+.cm-header-1,
 .markdown-preview-section h1 {
   font-size: $fontsize-heading1;
   color: var(--text-title-h1);
 
   &.cm-formatting {
-    font-size: $fontsize-heading1 - 4px;
+    font-size: $fontsize-heading1 - 25%;
   }
 }
 
-.CodeMirror pre.HyperMD-header-2,
+.cm-header-2,
 .markdown-preview-section h2 {
   font-size: $fontsize-heading2;
   color: var(--text-title-h2);
 
   &.cm-formatting {
-    font-size: $fontsize-heading2 - 4px;
+    font-size: $fontsize-heading2 - 25%;
   }
 }
 
-.CodeMirror pre.HyperMD-header-3,
+.cm-header-3,
 .markdown-preview-section h3 {
   font-size: $fontsize-heading3;
   color: var(--text-title-h3);
   &.cm-formatting {
-    font-size: $fontsize-heading3 - 4px;
+    font-size: $fontsize-heading3 - 25%;
   }
 }
 
-.CodeMirror pre.HyperMD-header-4,
+.cm-header-4,
 .markdown-preview-section h4 {
   font-size: $fontsize-heading4;
   color: var(--text-title-h4);
   &.cm-formatting {
-    font-size: $fontsize-heading4 - 6px;
+    font-size: $fontsize-heading4 - 37.5%;
   }
 }
 
-.CodeMirror pre.HyperMD-header-5,
-.CodeMirror pre.HyperMD-header-6,
+.cm-header-5,
+.cm-header-6,
 .markdown-preview-section h5,
 .markdown-preview-section h6 {
   font-size: $fontsize-heading5;
   color: var(--text-title-h5);
   &.cm-formatting {
-    font-size: $fontsize-heading5 - 8px;
+    font-size: $fontsize-heading5 - 50%;
   }
 }
