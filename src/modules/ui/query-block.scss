@@ -1,4 +1,21 @@
-.markdown-preview-view .internal-query.is-embed .internal-query-header {
-  color: var(--text-faint);
-  justify-content: left;
+.markdown-preview-view .internal-query.is-embed {
+  margin: 0;
+  border: none;
+
+  .search-empty-state {
+    margin: 0;
+  }
+
+  .internal-query-header {
+    color: var(--text-faint);
+    justify-content: left;
+  }
+
+  .internal-query-header-title {
+    font-size: 87.5%;
+  }
+
+  .search-results-children {
+    max-height: unset;
+  }
 }

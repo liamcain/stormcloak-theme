@@ -1,6 +1,8 @@
 .markdown-preview-view {
-  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  // font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont,
+  // sans-serif;
   font-size: 14px;
   padding-left: 48px;
   padding-right: 48px;
@@ -16,7 +18,7 @@
   h4,
   h5,
   h6 {
-    font-family: Merriweather, Georgia, serif;
+    // font-family: Merriweather, Georgia, serif;
     letter-spacing: 0.25px;
     line-height: 125%;
     margin: 24px 0;

@@ -548,7 +548,7 @@ span.cm-hashtag.cm-hashtag-end {
 }
 
 .markdown-preview-view {
-  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 14px;
   padding-left: 48px;
   padding-right: 48px;
@@ -563,7 +563,6 @@ span.cm-hashtag.cm-hashtag-end {
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
-  font-family: Merriweather, Georgia, serif;
   letter-spacing: 0.25px;
   line-height: 125%;
   margin: 24px 0;
@@ -930,9 +929,22 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   background: var(--background-secondary);
 }
 
+.markdown-preview-view .internal-query.is-embed {
+  margin: 0;
+  border: none;
+}
+.markdown-preview-view .internal-query.is-embed .search-empty-state {
+  margin: 0;
+}
 .markdown-preview-view .internal-query.is-embed .internal-query-header {
   color: var(--text-faint);
   justify-content: left;
+}
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+  font-size: 87.5%;
+}
+.markdown-preview-view .internal-query.is-embed .search-results-children {
+  max-height: unset;
 }
 
 ::-webkit-scrollbar {
